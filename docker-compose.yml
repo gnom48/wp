@@ -18,6 +18,8 @@ services:
     image: wordpress:latest
     volumes:
       - ./data/html:/var/www/html
+    ports:
+      - "80:80"
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: root
